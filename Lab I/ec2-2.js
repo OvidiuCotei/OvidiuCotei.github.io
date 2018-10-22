@@ -40,7 +40,8 @@ function t_ec2()
     }
 }
 
-function rezolva(){
+function rezolva()
+{
     var ec2 = new t_ec2();
     ec2.citeste();
     ec2.calculeaza();
