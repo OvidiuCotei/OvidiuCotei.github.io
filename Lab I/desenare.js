@@ -6,8 +6,7 @@ document.getElementById("id_start_button").disabled = false;
 document.getElementById("id_stop_button").disabled = true;
 
 var unghi = {valoare:0};
-	
-//-----------------------------------
+
 function deseneaza_cerc(context, w, h, unghi)
 {
 	context.clearRect(0, 0, w, h);
@@ -21,7 +20,7 @@ function deseneaza_cerc(context, w, h, unghi)
 	
 	unghi.valoare++;
 }
-//-----------------------------------
+
 function start()
 {
 	var canvas = document.getElementById("id_canvas");
@@ -37,7 +36,7 @@ function start()
 	
 	id_timer = setInterval(deseneaza_cerc, 10, context, canvas.width, canvas.height, unghi);
 }
-//-----------------------------------
+
 function stop()
 {
 	document.getElementById("id_start_button").disabled = false;
@@ -46,4 +45,3 @@ function stop()
 	clearInterval(id_timer);
 	my_worker.postMessage("stop");
 }
-//-----------------------------------
