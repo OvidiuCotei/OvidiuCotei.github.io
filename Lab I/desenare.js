@@ -28,6 +28,7 @@ function stop()
 	document.getElementById("id_start_button").disabled = false;
 	document.getElementById("id_stop_button").disabled = true;
 	clearInterval(id_timer);
+	my_worker.postMessage("stop");
 }
 
 function deseneaza_cerc(context, w, h, unghi)
