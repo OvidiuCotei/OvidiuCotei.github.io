@@ -24,5 +24,5 @@ function on_touch(e)
 	var canvas = document.getElementById("id_canvas");
 	var context = canvas.getContext("2d");
 	var video = document.getElementById("id_video");
-	context.drawImage(video, 0, 0);
+	context.drawImage(video, 0, 0, 400, 400);
 }
