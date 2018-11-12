@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.12.0";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.12.1";
 document.getElementById("id_button").addEventListener("click", start);
 
 function on_success(e)
@@ -13,6 +13,6 @@ function on_failure(e)
 
 function start()
 {
-	var c = {audio: true, video : true};
+	var c = {audio: true, video : {facingMode:"environment"}};
 	navigator.mediaDevices.getUserMedia(c).then(on_success).catch(on_failure);
 }
