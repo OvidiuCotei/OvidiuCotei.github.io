@@ -9,7 +9,7 @@ function on_touch_start(e)
 	{
 		var context = canvas.getContext("2d");
 		context.beginPath();
-		context.arc(e.changedTouches[i].pageX - canvas_bounding_rect.left, changedTouches[i].pageY - addEventListener.top, 10, 0, 2 * Math.PI);
+		context.arc(e.changedTouches[i].pageX - canvas_bounding_rect.left, changedTouches[i].pageY - canvas_bounding_rect.top, 10, 0, 2 * Math.PI);
 		context.stroke();
 	}
 }
