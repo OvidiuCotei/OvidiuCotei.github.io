@@ -1,14 +1,21 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.26.11";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.26.12";
 var canvas = document.getElementById("id_canvas");
 canvas.addEventListener("touchstart", on_touch_start);
 canvas.addEventListener("touchmove", on_touch_move);
 canvas.addEventListener("touchend", on_touch_end);
 
 var canvas_bounding_rect = canvas.getBoundingClientRect();
-
-
 var last_pos_array = [];
-//------------------------------------
+
+function get_random_color()
+{
+	var litere = '0123456789ABCDEF'
+	var s = "#";
+
+	for(var i = 0; i < 6; i++)
+		s = s + litere[Math.floor(Math.random() * 16)];
+}
+
 function on_touch_start(e)
 {
 	for (var i = 0; i < e.changedTouches.length; i++){
@@ -32,7 +39,7 @@ function on_touch_start(e)
 
 	}
 }
-//------------------------------------
+
 function on_touch_move(e)
 {
 	e.preventDefault();
@@ -70,7 +77,7 @@ function on_touch_move(e)
 	}
 	
 }
-//--------------------------------------
+
 function on_touch_end(e)
 {
 	for (var i = 0; i < e.changedTouches.length; i++){
@@ -83,4 +90,3 @@ function on_touch_end(e)
 	}
 	
 }
-//--------------------------------------
