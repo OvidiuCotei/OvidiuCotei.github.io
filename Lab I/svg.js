@@ -10,5 +10,5 @@ function on_device_orientation(e)
 	var svg_width = svg.getAttribute("width");
 
 	cerc.setAttribute("cx", svg_width / 2 + e.gamma / 90 * (canvas.width / 2 - R));
-	cerc.setAttribute("cy", svg_height / 2 + e.beta / 90 * (canvas.height / 2 - R))
+	cerc.setAttribute("cy", svg_height / 2 + e.beta / 90 * (canvas.height / 2 - R));
 }
